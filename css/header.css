@@ -1,0 +1,82 @@
+.main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(26, 26, 26, 0.95); /* خلفية شفافة شوية */
+    backdrop-filter: blur(10px); /* تأثير زجاجي فخم */
+    z-index: 1000;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2); /* خط ذهبي خفيف */
+    padding: 15px 0;
+    transition: all 0.3s ease;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: var(--gold-color);
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 900;
+}
+.logo span {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-family: var(--font-en);
+}
+
+.main-nav {
+    display: flex;
+    gap: 25px;
+}
+.main-nav a {
+    font-size: 1rem;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+.main-nav a:hover, .main-nav a.active {
+    color: var(--gold-color);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.lang-btn {
+    background: transparent;
+    border: 1px solid var(--gold-color);
+    color: var(--gold-color);
+    padding: 5px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.lang-btn:hover {
+    background: var(--gold-color);
+    color: var(--primary-color);
+}
+
+.mobile-menu-btn {
+    display: none; /* مخفي على الكمبيوتر */
+    background: none;
+    border: none;
+    color: var(--gold-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* التجاوب مع الموبايل */
+@media (max-width: 768px) {
+    .main-nav { display: none; } /* هنخفيها على الموبايل وتظهر بقائمة منسدلة لاحقاً */
+    .mobile-menu-btn { display: block; }
+}
