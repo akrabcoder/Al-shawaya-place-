@@ -1,0 +1,38 @@
+.floating-actions {
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    z-index: 1000;
+    width: 100%;
+    max-width: 600px;
+    padding: 0 20px;
+    justify-content: center;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: 0.3s;
+    flex: 1;
+}
+
+.btn-whatsapp { background: var(--whatsapp); color: white; }
+.btn-whatsapp:hover { background: #1ebe56; transform: translateY(-3px); }
+
+.btn-call { background: var(--card-bg); color: var(--gold-dark); border: 2px solid var(--gold); }
+.btn-call:hover { background: var(--gold); color: white; transform: translateY(-3px); }
+
+@media (max-width: 768px) {
+    .action-btn { padding: 12px; font-size: 0.9rem; }
+}
