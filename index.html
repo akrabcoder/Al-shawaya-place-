@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" id="html-root">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>قصر الشواية | Qasr Al-Shawaya</title>
+    <title id="page-title">قصر الشواية | Qasr Al-Shawaya</title>
     
-    <!-- الخطوط والأيقونات -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- ملفات الـ CSS المعزولة -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/hero.css">
@@ -22,15 +20,16 @@
     <header>
         <div class="header-container">
             <div class="logo">
-                <h1>قصر الشواية</h1>
+                <h1 data-ar="قصر الشواية" data-en="Qasr Al-Shawaya">قصر الشواية</h1>
                 <span>Qasr Al-Shawaya</span>
             </div>
             <nav class="nav-links">
-                <a href="#home">الرئيسية</a>
-                <a href="#menu">المنيو</a>
-                <a href="#charity">إفطار صائم</a>
+                <a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+                <a href="#menu" data-ar="المنيو" data-en="Menu">المنيو</a>
+                <a href="#charity" data-ar="إفطار صائم" data-en="Charity">إفطار صائم</a>
             </nav>
-            <button class="lang-btn">EN</button>
+            <!-- زرار تغيير اللغة -->
+            <button class="lang-btn" id="lang-toggle" onclick="toggleLanguage()">EN</button>
         </div>
     </header>
 
@@ -38,64 +37,71 @@
     <section class="hero" id="home">
         <div class="hero-text">
             <div class="hero-badges">
-                <div class="badge"><i class="fas fa-star"></i> 4.7 (1,619 تقييم)</div>
-                <div class="badge"><i class="fas fa-clock"></i> مفتوح حتى 3 صباحاً</div>
+                <div class="badge"><i class="fas fa-star"></i> 4.7 (1,619 <span data-ar="تقييم" data-en="Reviews">تقييم</span>)</div>
+                <div class="badge"><i class="fas fa-clock"></i> <span data-ar="مفتوح حتى 3 صباحاً" data-en="Open until 3 AM">مفتوح حتى 3 صباحاً</span></div>
             </div>
-            <h2>أصالة الطعم.. <br><span>وفخامة التقديم</span></h2>
-            <p>استمتع بأشهى دجاج شواية على الفحم مع الأرز البخاري الأصيل في قلب مكة المكرمة. جودة، نظافة، وطعم يليق بك.</p>
+            <h2>
+                <span data-ar="أصالة الطعم.." data-en="Authentic Taste..">أصالة الطعم..</span><br>
+                <span data-ar="وفخامة التقديم" data-en="Luxurious Presentation">وفخامة التقديم</span>
+            </h2>
+            <p data-ar="استمتع بأشهى دجاج شواية على الفحم مع الأرز البخاري الأصيل في قلب مكة المكرمة." 
+               data-en="Enjoy the most delicious charcoal-grilled chicken with authentic Bukhari rice in the heart of Makkah.">
+               استمتع بأشهى دجاج شواية على الفحم مع الأرز البخاري الأصيل في قلب مكة المكرمة.
+            </p>
         </div>
         <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1598514982205-f36b96d1e8dd?q=80&w=1000&auto=format&fit=crop" alt="دجاج شواية">
+            <!-- صورة مباشرة سريعة لدجاج شواية -->
+            <img src="https://images.pexels.com/photos/2338407/pexels-photo-2338407.jpeg?auto=compress&cs=tinysrgb&w=800" alt="دجاج شواية">
         </div>
     </section>
 
     <!-- 3. المنيو -->
     <section class="menu-section" id="menu">
         <div class="section-title">
-            <h2>قائـمـة <span>الطعام</span></h2>
-            <p>اختر ما يناسب ذوقك من أطباقنا المحضرة بكل حب</p>
+            <h2 data-ar="قائـمـة" data-en="Our">قائـمـة <span data-ar="الطعام" data-en="Menu">الطعام</span></h2>
+            <p data-ar="اختر ما يناسب ذوقك من أطباقنا المحضرة بكل حب" data-en="Choose what suits your taste from our dishes made with love">اختر ما يناسب ذوقك من أطباقنا المحضرة بكل حب</p>
         </div>
 
         <div class="menu-tabs">
-            <button class="tab-btn active" data-target="chicken">الدجاج والأرز</button>
-            <button class="tab-btn" data-target="sides">الإيدامات</button>
+            <button class="tab-btn active" data-target="chicken" data-ar="الدجاج والأرز" data-en="Chicken & Rice">الدجاج والأرز</button>
+            <button class="tab-btn" data-target="sides" data-ar="الإيدامات" data-en="Stews">الإيدامات</button>
         </div>
 
+        <!-- الدجاج والأرز -->
         <div class="menu-grid active" id="chicken">
             <div class="menu-card">
                 <div class="card-header">
-                    <h3>نصف دجاج شواية</h3>
-                    <span class="price">20 ريال</span>
+                    <h3 data-ar="نصف دجاج شواية" data-en="Half Grilled Chicken">نصف دجاج شواية</h3>
+                    <span class="price">20 <span data-ar="ريال" data-en="SAR">ريال</span></span>
                 </div>
-                <p>نصف دجاجة مشوية على الفحم مع الأرز البخاري.</p>
-                <a href="https://wa.me/966555209466?text=أريد%20طلب%20نصف%20دجاج%20شواية" target="_blank" class="card-order-btn"><i class="fab fa-whatsapp"></i> اطلب الآن</a>
+                <p data-ar="نصف دجاجة مشوية على الفحم مع الأرز البخاري." data-en="Half charcoal-grilled chicken with Bukhari rice.">نصف دجاجة مشوية على الفحم مع الأرز البخاري.</p>
+                <a href="https://wa.me/966555209466?text=أريد%20طلب%20نصف%20دجاج%20شواية" target="_blank" class="card-order-btn">
+                    <i class="fab fa-whatsapp"></i> <span data-ar="اطلب الآن" data-en="Order Now">اطلب الآن</span>
+                </a>
             </div>
             <div class="menu-card">
                 <div class="card-header">
-                    <h3>دجاج شواية (كامل)</h3>
-                    <span class="price">42 ريال</span>
+                    <h3 data-ar="دجاج شواية (كامل)" data-en="Whole Grilled Chicken">دجاج شواية (كامل)</h3>
+                    <span class="price">42 <span data-ar="ريال" data-en="SAR">ريال</span></span>
                 </div>
-                <p>دجاجة كاملة مشوية على الفحم مع الأرز والصوص.</p>
-                <a href="https://wa.me/966555209466?text=أريد%20طلب%20دجاج%20شواية%20كامل" target="_blank" class="card-order-btn"><i class="fab fa-whatsapp"></i> اطلب الآن</a>
+                <p data-ar="دجاجة كاملة مشوية على الفحم مع الأرز والصوص." data-en="Whole charcoal-grilled chicken with rice and sauce.">دجاجة كاملة مشوية على الفحم مع الأرز والصوص.</p>
+                <a href="https://wa.me/966555209466?text=أريد%20طلب%20دجاج%20شواية%20كامل" target="_blank" class="card-order-btn">
+                    <i class="fab fa-whatsapp"></i> <span data-ar="اطلب الآن" data-en="Order Now">اطلب الآن</span>
+                </a>
             </div>
         </div>
 
+        <!-- الإيدامات -->
         <div class="menu-grid" id="sides">
             <div class="menu-card">
                 <div class="card-header">
-                    <h3>إيدام بامية</h3>
-                    <span class="price">8 ريال</span>
+                    <h3 data-ar="إيدام بامية" data-en="Okra Stew">إيدام بامية</h3>
+                    <span class="price">8 <span data-ar="ريال" data-en="SAR">ريال</span></span>
                 </div>
-                <p>بامية مطبوخة بطريقة تقليدية لذيذة.</p>
-                <a href="https://wa.me/966555209466?text=أريد%20طلب%20إيدام%20بامية" target="_blank" class="card-order-btn"><i class="fab fa-whatsapp"></i> اطلب الآن</a>
-            </div>
-            <div class="menu-card">
-                <div class="card-header">
-                    <h3>إيدام ملوخية</h3>
-                    <span class="price">8 ريال</span>
-                </div>
-                <p>ملوخية خضراء طازجة ومجهزة بإتقان.</p>
-                <a href="https://wa.me/966555209466?text=أريد%20طلب%20إيدام%20ملوخية" target="_blank" class="card-order-btn"><i class="fab fa-whatsapp"></i> اطلب الآن</a>
+                <p data-ar="بامية مطبوخة بطريقة تقليدية لذيذة." data-en="Traditionally cooked delicious okra.">بامية مطبوخة بطريقة تقليدية لذيذة.</p>
+                <a href="https://wa.me/966555209466?text=أريد%20طلب%20إيدام%20بامية" target="_blank" class="card-order-btn">
+                    <i class="fab fa-whatsapp"></i> <span data-ar="اطلب الآن" data-en="Order Now">اطلب الآن</span>
+                </a>
             </div>
         </div>
     </section>
@@ -103,14 +109,13 @@
     <!-- 4. الأزرار العائمة -->
     <div class="floating-actions">
         <a href="https://wa.me/966555209466?text=مرحباً%20قصر%20الشواية،%20أرغب%20في%20تقديم%20طلب" target="_blank" class="action-btn btn-whatsapp">
-            <i class="fab fa-whatsapp" style="font-size: 1.3rem;"></i> اطلب واتساب
+            <i class="fab fa-whatsapp"></i> <span data-ar="اطلب واتساب" data-en="Order via WhatsApp">اطلب واتساب</span>
         </a>
         <a href="tel:+966555209466" class="action-btn btn-call">
-            <i class="fas fa-phone-alt"></i> اتصل بنا
+            <i class="fas fa-phone-alt"></i> <span data-ar="اتصل بنا" data-en="Call Us">اتصل بنا</span>
         </a>
     </div>
 
-    <!-- ملف الجافاسكريبت -->
     <script src="js/script.js"></script>
 </body>
 </html>
