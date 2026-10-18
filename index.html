@@ -5,86 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>قصر الشواية | Qasr Al-Shawaya</title>
     
-    <!-- خطوط جوجل -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
-    <!-- مكتبة الأيقونات -->
+    <!-- الخطوط والأيقونات -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- ملفات التنسيق المعزولة -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- ملفات الـ CSS المعزولة -->
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/hero.css">
-    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
 
-    <!-- 1. مكون الهيدر -->
-    <header class="main-header">
+    <!-- 1. الهيدر -->
+    <header>
         <div class="header-container">
-            <!-- اللوجو -->
             <div class="logo">
                 <h1>قصر الشواية</h1>
                 <span>Qasr Al-Shawaya</span>
             </div>
-            
-            <!-- روابط التنقل -->
-            <nav class="main-nav">
-                <a href="#home" class="active">الرئيسية</a>
+            <nav class="nav-links">
+                <a href="#home">الرئيسية</a>
                 <a href="#menu">المنيو</a>
                 <a href="#charity">إفطار صائم</a>
-                <a href="#contact">تواصل معنا</a>
             </nav>
-
-            <!-- زر اللغة -->
-            <div class="header-actions">
-                <button class="lang-btn">EN</button>
-                <!-- زرار الموبايل (برجر مينيو) -->
-                <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
-            </div>
+            <button class="lang-btn">EN</button>
         </div>
     </header>
 
-    <!-- 2. مكون الواجهة الرئيسية (Hero) -->
-    <section class="hero-section" id="home">
-        <div class="hero-content">
-            <!-- شارة التقييم ومواعيد العمل -->
+    <!-- 2. الواجهة الرئيسية -->
+    <section class="hero" id="home">
+        <div class="hero-text">
             <div class="hero-badges">
-                <span class="badge rating"><i class="fas fa-star"></i> 4.7 (1,619 تقييم)</span>
-                <span class="badge open-time"><i class="fas fa-clock"></i> مفتوح حتى 3 صباحاً</span>
+                <div class="badge"><i class="fas fa-star"></i> 4.7 (1,619 تقييم)</div>
+                <div class="badge"><i class="fas fa-clock"></i> مفتوح حتى 3 صباحاً</div>
             </div>
-            
-            <h2 class="hero-title">أصالة الطعم.. وفخامة التقديم</h2>
-            <p class="hero-subtitle">استمتع بأشهى دجاج شواية على الفحم مع الأرز البخاري الأصيل في قلب مكة المكرمة.</p>
-            
-            <!-- أزرار الواجهة -->
-            <div class="hero-buttons">
-                <a href="#menu" class="btn-primary">تصفح المنيو</a>
-                <a href="#about" class="btn-secondary">قصتنا</a>
+            <h2>أصالة الطعم.. <br><span>وفخامة التقديم</span></h2>
+            <p>استمتع بأشهى دجاج شواية على الفحم مع الأرز البخاري الأصيل في قلب مكة المكرمة. جودة، نظافة، وطعم يليق بك.</p>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1598514982205-f36b96d1e8dd?q=80&w=1000&auto=format&fit=crop" alt="دجاج شواية">
+        </div>
+    </section>
+
+    <!-- 3. المنيو -->
+    <section class="menu-section" id="menu">
+        <div class="section-title">
+            <h2>قائـمـة <span>الطعام</span></h2>
+            <p>اختر ما يناسب ذوقك من أطباقنا المحضرة بكل حب</p>
+        </div>
+
+        <div class="menu-tabs">
+            <button class="tab-btn active" data-target="chicken">الدجاج والأرز</button>
+            <button class="tab-btn" data-target="sides">الإيدامات</button>
+        </div>
+
+        <div class="menu-grid active" id="chicken">
+            <div class="menu-card">
+                <div class="card-header">
+                    <h3>نصف دجاج شواية</h3>
+                    <span class="price">20 ريال</span>
+                </div>
+                <p>نصف دجاجة مشوية على الفحم مع الأرز البخاري.</p>
+                <a href="https://wa.me/966555209466?text=أريد%20طلب%20نصف%20دجاج%20شواية" target="_blank" class="card-order-btn"><i class="fab fa-whatsapp"></i> اطلب الآن</a>
+            </div>
+            <div class="menu-card">
+                <div class="card-header">
+                    <h3>دجاج شواية (كامل)</h3>
+                    <span class="price">42 ريال</span>
+                </div>
+                <p>دجاجة كاملة مشوية على الفحم مع الأرز والصوص.</p>
+                <a href="https://wa.me/966555209466?text=أريد%20طلب%20دجاج%20شواية%20كامل" target="_blank" class="card-order-btn"><i class="fab fa-whatsapp"></i> اطلب الآن</a>
+            </div>
+        </div>
+
+        <div class="menu-grid" id="sides">
+            <div class="menu-card">
+                <div class="card-header">
+                    <h3>إيدام بامية</h3>
+                    <span class="price">8 ريال</span>
+                </div>
+                <p>بامية مطبوخة بطريقة تقليدية لذيذة.</p>
+                <a href="https://wa.me/966555209466?text=أريد%20طلب%20إيدام%20بامية" target="_blank" class="card-order-btn"><i class="fab fa-whatsapp"></i> اطلب الآن</a>
+            </div>
+            <div class="menu-card">
+                <div class="card-header">
+                    <h3>إيدام ملوخية</h3>
+                    <span class="price">8 ريال</span>
+                </div>
+                <p>ملوخية خضراء طازجة ومجهزة بإتقان.</p>
+                <a href="https://wa.me/966555209466?text=أريد%20طلب%20إيدام%20ملوخية" target="_blank" class="card-order-btn"><i class="fab fa-whatsapp"></i> اطلب الآن</a>
             </div>
         </div>
     </section>
 
-    <!-- 3. مكون أزرار الطلب العائمة (Floating Buttons) -->
-    <div class="floating-order-container">
-        <!-- زرار واتساب -->
-        <a href="https://wa.me/966555209466?text=مرحباً%20قصر%20الشواية،%20أرغب%20في%20تقديم%20طلب:%20" 
-           target="_blank" 
-           class="btn-order whatsapp-btn" 
-           aria-label="اطلب عبر الواتساب">
-            <i class="fab fa-whatsapp"></i>
-            <span>اطلب واتساب</span>
+    <!-- 4. الأزرار العائمة -->
+    <div class="floating-actions">
+        <a href="https://wa.me/966555209466?text=مرحباً%20قصر%20الشواية،%20أرغب%20في%20تقديم%20طلب" target="_blank" class="action-btn btn-whatsapp">
+            <i class="fab fa-whatsapp" style="font-size: 1.3rem;"></i> اطلب واتساب
         </a>
-        
-        <!-- زرار الاتصال -->
-        <a href="tel:+966555209466" 
-           class="btn-order call-btn" 
-           aria-label="اتصل بنا">
-            <i class="fas fa-phone-alt"></i>
-            <span>اتصل بنا</span>
+        <a href="tel:+966555209466" class="action-btn btn-call">
+            <i class="fas fa-phone-alt"></i> اتصل بنا
         </a>
     </div>
 
     <!-- ملف الجافاسكريبت -->
-    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
