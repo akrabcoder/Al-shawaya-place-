@@ -1,0 +1,62 @@
+.floating-order-container {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0 20px;
+    z-index: 999;
+    pointer-events: none; /* عشان ميعطلش الضغط على باقي الموقع */
+}
+
+.btn-order {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    pointer-events: auto; /* تفعيل الضغط على الأزرار بس */
+}
+
+/* زرار الواتساب */
+.whatsapp-btn {
+    background-color: var(--whatsapp-color);
+    color: white;
+    flex: 1;
+    max-width: 250px;
+}
+.whatsapp-btn:hover {
+    background-color: #1ebe56;
+    transform: translateY(-3px);
+}
+
+/* زرار الاتصال */
+.call-btn {
+    background-color: var(--primary-color);
+    color: var(--gold-color);
+    border: 1px solid var(--gold-color);
+    flex: 1;
+    max-width: 250px;
+}
+.call-btn:hover {
+    background-color: var(--gold-color);
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .floating-order-container {
+        padding: 0 10px;
+        bottom: 15px;
+    }
+    .btn-order {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+}
