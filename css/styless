@@ -1,0 +1,28 @@
+/* المتغيرات الأساسية */
+:root {
+    --primary-color: #1A1A1A; /* الأسود الفحمي */
+    --gold-color: #D4AF37;    /* الذهبي */
+    --text-light: #F9F9F9;    /* أبيض مريح */
+    --text-muted: #A0A0A0;    /* رمادي للنصوص الثانوية */
+    --whatsapp-color: #25D366;
+    --font-ar: 'Cairo', sans-serif;
+    --font-en: 'Tajawal', sans-serif;
+}
+
+/* تصفير الإعدادات */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-ar);
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
